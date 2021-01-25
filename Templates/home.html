@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Home
+{% endblock title %}
+
+{% block body %}
+    {% for post in posts %}
+        <!-- <div class="container" style="margin-bottom: 3%;">
+            <h1>Title: {{post.title}}</h1>
+            <p>Content:{{post.content}}</p>
+            <b>Posted by: {{post.author}}</b>
+        </div> -->
+
+        <div class="card" style="width: 50rem; margin-bottom: 2%;">
+            <div class="card-body">
+              <h1 style="border-bottom: 2%;" class="card-title">Title: {{post.title}}</h1>
+              <p style="border-bottom: 2%;" class="card-text"><b>Content:</b>{{post.content}}</p>
+              <p style="border-bottom: 2%;" class="card-text"><b>Posted by:</b>{{post.author}}</p>
+              <p style="border-bottom: 2%;" class="card-text"><b>Posted Date:</b>{{post.date}}</p>
+            </div>
+          </div>
+
+
+
+    {% endfor%}
+{% endblock body %}
