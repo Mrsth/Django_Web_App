@@ -30,3 +30,13 @@ If you want to see the models in the admin panel then you need to register both 
 <p>
   Put the fetched data into the context and pass it to the respective html page.
 </p>
+
+<h2>A web application practice 2021/Jan/26</h2>
+<img src="Images for github/user_validation_and_message.PNG"/>
+<p>
+  In views.py file import UserCreationForm and message. Then check the method of the form, if the method is "POST" then run the code. After that create the
+  instance of the UserCreationForm having the value entered from the form. Then validate if the provided input is correct/valid or not. Now, save the user which 
+  will be recorded in the database.
+  
+  In base.html alert-{{message.tags}} will give the respective type of alert. If it is success alert the success alert is show, if waring then warning alert is shown.
+</p>
