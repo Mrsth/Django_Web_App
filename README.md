@@ -32,11 +32,33 @@ If you want to see the models in the admin panel then you need to register both 
 </p>
 
 <h2>A web application practice 2021/Jan/26</h2>
-<img src="Images for github/user_validation_and_message.PNG"/>
 <p>
+  <h3> User validation and message</h3>
+  <img src="Images for github/user_validation_and_message.PNG"/>
   In views.py file import UserCreationForm and message. Then check the method of the form, if the method is "POST" then run the code. After that create the
   instance of the UserCreationForm having the value entered from the form. Then validate if the provided input is correct/valid or not. Now, save the user which 
   will be recorded in the database.
   
   In base.html alert-{{message.tags}} will give the respective type of alert. If it is success alert the success alert is show, if waring then warning alert is shown.
+</p>
+
+<p>
+  <h3>Customizing the form</h3>
+  <img src="Images for github/Custome_registration_form.PNG"/>
+  The above image shows how we can customize the form made in django. In views.py replace UserCreationForm by custom form "RegistrationForm". 
+  <ul>
+    <li>First create a form.py in the respective app</li>
+    <li>Do the necessary importing as above.</li>
+    <li>Now create the Signupform which inherits the UserCreationForm</li>
+    <li>Create the required field example email. model=User means perform modification in User model. Field means show the fields in the same order.</li>
+  </ul>
+</p>
+
+<p>
+  <img src="Images for github/Crispy.PNG"/>
+  In order to make form look good, we have used Django Crispy.
+  <ul>
+    <li>Refer this for installing the crispy django form: https://django-crispy-forms.readthedocs.io/en/latest/install.html</li>
+    <li>Now load the crispy form tag in the required html and do this {{signup | crispy}}</li>
+  </ul>
 </p>
