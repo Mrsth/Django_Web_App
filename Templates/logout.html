@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    LogOut
+{% endblock title %}
+
+{% block body %}
+    <div class="container w-25" style="margin-top: 10%;">
+        <h2 style="text-align: center;">Logged Out</h2>
+        <div class="mt-5">
+            Go back to login page?
+            <a href="{% url 'login_view' %}">Login Page</a>
+        </div>
+    </div>
+{% endblock body %}

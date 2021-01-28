@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    Sign Up Form
+{% endblock title %}
+
+{% block body %}
+    <!-- {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{message.tags}}">
+                {{message}}
+            </div>
+        {% endfor%}
+    {% endif %} -->
+    <div class="container w-50" style="margin-top: 4%;">
+        <h1 style="text-align: center;">Sign up</h1>
+        <form method="POST" class="container mt-5 w-5">
+            {% csrf_token%}
+            {{signup_form | crispy}}
+            <input type="submit" value="Sign in" class="btn btn-dark"/>
+        </form>
+    </div>
+    <br>
+    <hr>
+    <div>
+        <small>Already have an account? <a href="#">Go to login</a></small>
+    </div>
+
+{% endblock body %}
