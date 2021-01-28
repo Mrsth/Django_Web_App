@@ -89,4 +89,17 @@ If you want to see the models in the admin panel then you need to register both 
     like below:
     <img src="Images for github/Login_redirect_url.PNG"/>
   </p>
-<div>  
+<div>
+  
+<div>
+   <h3>How to restrict url?</h3>
+   <p>
+      Import the following decorator:
+      <img src="Images for github/Login required.PNG"/>
+   </p>
+   <p>
+      As a result of the dash.html will only be accessible after login. Now if the login is incorrect then the user will be redirected to
+      the django default page. To redirect to the required page then do some modification in the setting file as follows:
+      <img src="Images for github/Login url.PNG"/>
+   </p>
+</div> 
