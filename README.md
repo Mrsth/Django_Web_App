@@ -1,6 +1,7 @@
 # Django_Web_App
 
 <h2>A web application practice 2021/Jan/25</h2>
+<hr>
 <img src="Images for github/Dashborad.PNG">
 <p>This is the dashboard of the web application under construction. Here, there is a navbar and we can see some posts as well. 
 For now let this be just a dummy variables in the context which is passed on to the html page. 
@@ -32,6 +33,7 @@ If you want to see the models in the admin panel then you need to register both 
 </p>
 
 <h2>A web application practice 2021/Jan/26</h2>
+<hr>
 <p>
   <h3> User validation and message</h3>
   <img src="Images for github/user_validation_and_message.PNG"/>
@@ -62,3 +64,29 @@ If you want to see the models in the admin panel then you need to register both 
     <li>Now load the crispy form tag in the required html and do this {{signup | crispy}}</li>
   </ul>
 </p>
+
+
+<h2>A web application practice 2021/Jan/28</h2>
+<hr>
+<div>
+  <h3>How to make login form?</h3>
+  <p>
+    First of all import the LoginView and LogoutView as show below:
+    <img src="Images for github/Login_logout_view.PNG"/>
+    LoginView and LogoutView are classed based view.
+  </p>
+  <p>
+    Now make the html page for login and logout as follows:
+    <img src="Images for github/Login_logout_html.PNG"/>
+  </p>
+  <p>
+    Now make dynamic navbar. I.e. only show login and register if the user is not logged in else show only logout button.
+    <img src="Images for github/Dynamic_login_logout_button.PNG"/>
+  </p>
+  <p>
+    Now if the user logged in then the django will redirect the user into its own default page like "/accounts/profiles".But we
+    need to redirect the user into custom made page. For this we have to make some changes in the setting.py file of the project 
+    like below:
+    <img src="Images for github/Login_redirect_url.PNG"/>
+  </p>
+<div>  
