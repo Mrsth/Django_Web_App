@@ -103,3 +103,32 @@ If you want to see the models in the admin panel then you need to register both 
    </p>
    <img src="Images for github/Login url.PNG"/>
 </div> 
+
+<div>
+  <h2>A web application practice 2021/Feb/2</h2>
+  <hr>
+  <h3>How to update Form Using ModelForm?</h3>
+  <b>STEP 1:</b><p>First of all import necessary importings for this modelform we need "from django import forms"</p>
+  <img src="Images for github/ModelForm_1st_step.PNG"/>
+  <p>
+    From above diagram we can see that "UserUpdateForm" and "ProfileUpdateForm" are the two modelform used to update the model
+    "User" and "Profile" respectively. Django ModelForm is a class that is used to directly convert a model into a Django form.
+    For more about django modelform click the link below: https://www.geeksforgeeks.org/django-modelform-create-form-from-models/
+    In UserUpdateForm we can see that there is email field. It is the way we add our own required field in the defaulr django form.
+    In UserUpdateForm email, and username are the attribute of the class User model just like image is the attribute for the Profile model.
+  </p>
+  <b>STEP 2:</b><p>Creating the instances of the modelform</p>
+  <img src="Images for github/ModelForm_2nd_step.PNG"/>
+  <p>
+    Now we have to create the instances of the modelform in the required views.py file. Here we need to create the update form in the dashboard
+    we create the instances in the dash function and pass the instances in the context.
+  </p>
+  
+  <b>STEP 3:</b><p>Showing the instances and encoding/p>
+  <img src="Images for github/ModelForm_3rd_step.PNG">
+  <p>
+    Now we show the passed instances from the context into the html page. Also we need to type enctype="multipart/form-data" in the form tag.
+    This will help in the proper loading of the images for the profile picture.
+  </p>
+  
+</div>
