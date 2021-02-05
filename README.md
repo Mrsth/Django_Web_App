@@ -124,11 +124,25 @@ If you want to see the models in the admin panel then you need to register both 
     we create the instances in the dash function and pass the instances in the context.
   </p>
   
-  <b>STEP 3:</b><p>Showing the instances and encoding/p>
+  <b>STEP 3:</b>
+  <p>Showing the instances and encoding/p>
   <img src="Images for github/ModelForm_3rd_step.PNG">
   <p>
     Now we show the passed instances from the context into the html page. Also we need to type enctype="multipart/form-data" in the form tag.
     This will help in the proper loading of the images for the profile picture.
   </p>
   
+  <div>
+   <h2>A web application practice 2021/Feb/3</h2>
+   <hr>
+   <h3>Solving the error of not showing the default image</h3>
+   <img src="Images for github/default_profile_pic.PNG"/>
+   <p>
+     The problem occured because, when django tried to render the default image for the user having no profile picture then we have just
+     defined that thing in the program. I.e we have not created object for each profile of each user. So when django try to render the
+     image then there will be no object of the user so it will not render anything. At first we create the object manually but later on
+     we will use signal for not doing it automatically. If we don't use signal then we must go to admin and create the object of each user
+     created and add image to that object.
+  </p>
+  </div>
 </div>
