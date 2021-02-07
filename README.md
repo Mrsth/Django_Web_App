@@ -145,4 +145,24 @@ If you want to see the models in the admin panel then you need to register both 
      created and add image to that object.
   </p>
   </div>
+  
+  <div>
+    <h2>A web application practice 2021/Feb/5</h2>
+    <hr>
+    <h3>Signal practice</h3>
+    <img src="Images for github/Signal_instruction_step1.PNG"/>
+    At first create a signals.py file in the app where we need to use the signals then import the User as well as signals as shown in the figure above.
+    user_logged_in, user_logged_out, user_login_failed are the signals. And User is the signal sender. Now its time to make a signal receiver. E.g: 
+    login_signal_handler, and logout_signal_handler as shown in the figure above. Now we need to connect the receiver the signal with the respective
+    receiver otherwise signals won't know which way to go and signal receiver won't know which signal to receive. So for this we have two ways:
+      - <b>Manual Connect Route:</b> In this way we use signal.connect(signal_handler, sender=User). In above figure this way is commented out at the
+        bottom.
+      - <b>Decorator:</b> To use this way we need to import "from django.dispatcher import receiver". And after that add the decorator at the top of the
+        respective signal receiver function as shown in the figure above.
+    
+   Now we need to do two more configurations as follows:
+   <img src="Images for github/Signal_instruction_step2.PNG"/> 
+   <img src="Images for github/Signal_instruction_step3.PNG"/>
+   While installing the app after using the signal, it is very mandatory to write the code as it is in the above image.
+  </div>
 </div>
