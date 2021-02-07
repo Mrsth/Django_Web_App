@@ -163,6 +163,37 @@ If you want to see the models in the admin panel then you need to register both 
    Now we need to do two more configurations as follows:
    <img src="Images for github/Signal_instruction_step2.PNG"/> 
    <img src="Images for github/Signal_instruction_step3.PNG"/>
-   While installing the app after using the signal, it is very mandatory to write the code as it is in the above image.
+   <p>
+     While installing the app after using the signal, it is very mandatory to write the code as it is in the above image.
+   </p>
   </div>
+  
+   <div>
+    <h2>A web application practice 2021/Feb/7</h2>
+    <hr>
+    <h3>Generic view: ListView and DetailedView</h3>
+    <img src="Images for github/Generic_listview_detailview.PNG"/>
+    <p>
+      In order to work with generic view, we need to import it as shown in the figure above.
+      Instead of using the function based view "home" we will use a class based view PostListView and we also need to 
+      do some changes in the url accordingly. In postListView "model", "template", "context_object_name", "ordering"
+      are the attributes of the view. 
+      <ul>
+        <li>model will specify from which model to query and return a list of objects.</li>
+        <li>templete specify which template to render when the view is called.</li>
+        <li>context_object_name specify the name of the object which is used as looping object</li>
+        <li>ordering specify the order like ascending or descending</li>
+      </ul>
+    </p>
+    <img src="Images for github/Generic_url.PNG"/>
+    <p>
+    The first url pattern is the way how class based views are called. The second one is kind of different because,
+    this url patter is taking an integer like a parameter and directing into a post-detail html template. 
+    </p>
+    <img src="Images for github/Generic_html_modification.PNG"/>
+    <p>
+      In the above figure home.html, while providing the link to the title of each post the used the name
+      given in the urls.py.
+    </p>  
+   </div>
 </div>
